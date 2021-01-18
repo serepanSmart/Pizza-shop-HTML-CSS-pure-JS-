@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Pizza</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="create">
+            <h1 class="main-title"> create pizza</h1>
+            <div class="image">
+                <img id="imageView" src="https://cdn2.iconfinder.com/data/icons/creative-15/64/pizza-Italian-food-fast-food-512.png" alt="">
+                <input type="file" placeholder="add image" id="addImg">
+                <input type="text" placeholder="add title" id="addTitle">
+            </div>
+            <div class="compositions">
+                <!-- js render here -->
+            </div>
+            <div class="info">
+                <h1>Price</h1>
+                <p>Caloricity</p>
+            </div>
+            <button id="btnCreate">Создать</button>
+            <button id="goToShop">Обратно в магазин</button>
+        </div>
+    </main>
+    <script src="js/customJquery.js"></script>
+    <script src="js/listOfPizzas.js"></script>
+    <script src="js/createPizza.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+// Media queries
+@mixin screen($point) {
+    $xl: 1200px;
+    $lg: 992px;
+    $md: 768px;
+    $sm: 576px;
+
+    @if $point == xl {
+      @media screen and (min-width: $xl) {
+        @content;
+      }
+    }
+      @else if $point == lg {
+      @media screen and (min-width: $lg) {
+        @content;
+      }
+    }
+    @else if $point == md {
+      @media screen and (min-width: $md) {
+        @content;
+      }
+    }
+    @else if $point == sm {
+      @media screen and (min-width: $sm) {
+        @content;
+      }
+    }
+    @else {
+      @media screen and (min-width: $point) {
+        @content;
+      }
+    }
+  }
+
+
+  // Placeholder
+
+  @mixin placeholder ($color, $opacity-end, $transition: 0.3s, $transition-function: ease) {
+    &::-webkit-input-placeholder {
+      color: $color;
+      opacity: 1;
+      transition: opacity $transition $transition-function;
+    }
+    &::-moz-placeholder {
+      color: $color;
+      opacity: 1;
+      transition: opacity $transition $transition-function;
+    }
+    &:-moz-placeholder {
+      color: $color;
+      opacity: 1;
+      transition: opacity $transition $transition-function;
+    }
+    &:-ms-input-placeholder {
+      color: $color;
+      opacity: 1;
+      transition: opacity $transition $transition-function;
+    }
+    &:focus::-webkit-input-placeholder {
+      opacity: $opacity-end;
+    }
+    &:focus::-moz-placeholder {
+      opacity: $opacity-end;
+    }
+    &:focus:-moz-placeholder {
+      opacity: $opacity-end;
+    }
+    &:focus:-ms-input-placeholder {
+      opacity: $opacity-end;
+    }
+  }

@@ -1,0 +1,302 @@
+.header {
+  padding-top: 15px;
+  padding-bottom: 34px;
+  font-family: $font-base;
+  background: url(https://r4g9h8b8.stackpathcdn.com/wp-content/uploads/2019/03/20190305_Nicolette-Lovell_Sacramento_City-Scout_The-Neighborhood-Pizzeria-5-683x1024@2x.jpg) center/cover no-repeat;
+
+  .container {
+    display: flex;
+  }
+
+  .cart {
+    position: fixed;
+    top: 130px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/basket-icon.png) center/cover no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
+    opacity: 0.7;
+
+    @include screen(md) {
+      top: 25px;
+      right: 25px;
+    }
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+
+    #cartCount {
+      position: absolute;
+      top: 85%;
+      left: 5%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border: 1px solid #4090db;
+      border-radius: 50%;
+      background: grey;
+      text-align: center;
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  .cart_basket {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 10px;
+    z-index: 999;
+    border: 2px solid red;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ccc, #000);
+  }
+
+  .active {
+    display: block;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    @include screen(lg) {
+      flex-direction: row;
+    }
+
+    p {
+      font: 14px 'Tahoma', $font-secondary-rg;
+      color: #fff;
+
+      @include screen(sm) {
+        font-size: 15px;
+      }
+
+      @include screen(md) {
+        font-size: 16px;
+      }
+
+      @include screen(lg) {
+        font-size: 17px;
+      }
+    }
+
+    .input {
+      position: relative;
+      width: 183px;
+      margin: 0 14px 5px;
+
+      select {
+        padding: 5px 9px;
+        font: 12px/1 $font-secondary-rg;
+      }
+    }
+  }
+
+  &__logo {
+    width: 45%;
+    text-align: center;
+
+    img {
+      width: 100%;
+
+      @include screen(lg) {
+        width: 43%;
+      }
+    }
+  }
+
+  &__description {
+    width: 65%;
+    padding-top: 5px;
+
+    @include screen(sm) {
+      padding-top: 20px;
+    }
+
+    @include screen(md) {
+      padding-top: 25px;
+    }
+
+    @include screen(lg) {
+      padding-top: 30px;
+    }
+
+    &_calendar,
+    &-search {
+      margin-left: -50%;
+      margin-bottom: 20px;
+
+      @include screen(sm) {
+        margin-left: -20%;
+      }
+
+      @include screen(md) {
+        margin-left: -40%;
+      }
+    }
+
+    label {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    &_top {
+      margin-bottom: 20px;
+      text-align: center;
+
+      @include screen(sm) {
+        text-align: left;
+      }
+
+      p {
+        font: 20px 'Myriad Pro', Helvetica, sans-serif;
+        color: #fff;
+
+        @include screen(sm) {
+          font-size: 25px;
+        }
+
+        @include screen(md) {
+          font-size: 30px;
+        }
+
+        @include screen(lg) {
+          font-size: 35px;
+        }
+
+        span {
+          display: inline-block;
+          padding: 9px 12px 9px 10px;
+          margin-top: 10px;
+          text-align: center;
+          vertical-align: middle;
+          font: 12px $font-secondary-rg;
+          color: #7ab0e2;
+          border: 1px solid currentColor;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: 0.3s;
+
+          @include screen(sm) {
+            margin-top: 0;
+            font-size: 13px;
+          }
+
+          @include screen(md) {
+            margin-left: 19px;
+            font-size: 14px;
+          }
+
+          @include screen(lg) {
+            font-size: 15px;
+          }
+
+          &:hover {
+            filter: brightness(150%);
+            box-shadow: 0 0 3px #4090db;
+          }
+        }
+      }
+    }
+
+    &_statistics {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 22px;
+
+      @include screen(sm) {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      &-item {
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+
+          @include screen(sm) {
+            margin-bottom: 0;
+            margin-right: 29px;
+          }
+        }
+
+        p {
+          font: 14px $font-base;
+          color: #fff;
+
+          @include screen(sm) {
+            font-size: 15px;
+          }
+
+          @include screen(md) {
+            font-size: 16px;
+          }
+
+          @include screen(lg) {
+            font-size: 17px;
+          }
+
+          span {
+            font: 16px $font-base;
+            font-weight: bold;
+
+            @include screen(sm) {
+              font-size: 17px;
+            }
+
+            @include screen(md) {
+              font-size: 18px;
+            }
+
+            @include screen(lg) {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sort_by_price_calories {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    form {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-family: $font-base;
+      color: #fff;
+
+      input {
+        width: 75%;
+        margin-right: 15px;
+        margin-bottom: 10px;
+
+        @include screen (lg) {
+          width: 25%;
+        }
+      }
+
+      button:first-of-type {
+        margin-bottom: 10px;
+
+        @include screen (lg) {
+          margin-bottom: 0;
+          margin-right: 15px;
+        }
+
+      }
+    }
+  }
+}

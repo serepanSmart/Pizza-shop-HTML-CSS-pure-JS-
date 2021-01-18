@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Address</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main class="custom">
+        <div class="container customer">
+            <div class="delivery">
+                <h1>Выберите тип доставки</h1>
+                <select id="deliverySelect">
+                    <option value="Новая Почта">Новая Почта</option>
+                    <option value="Укр Почта">Укр Почта</option>
+                    <option value="EMS">EMS</option>
+                    <option value="DHL">DHL</option>
+                    <option value="Курьер">Курьер</option>
+                </select>
+
+                <h1>Укажите Ваши данные для успешного оформления заказа: </h1>
+                <input type="text" id="org" placeholder="Организация">
+                <input type="text" id="city" placeholder="Харьков">
+                <input type="text" id="street" placeholder="Ваша улица"></>
+                <input type="text" id="house" placeholder="Дом №">
+
+                <button id="toOrder">Далее</button>
+                <button id="toCustomer">Назад</button>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="js/listOfPizzas.js"></script>
+    <script src="js/address.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.menu {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border: 1px solid red;
+}
+
+.drop {
+    display: none;
+}
+
+.main-title {
+    width: 100%;
+    text-align: center;
+    color: #ffea17;
+}
+
+.compositions {
+    display: flex;
+    flex-wrap: wrap;
+    color: #ffea17;
+}
+
+.create {
+    display: flex;
+    margin-top: 25px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background: rgba(139, 136, 136, 0.8);
+    border: 2px solid yellow;
+    border-radius: 25px;
+    box-shadow: 0 0 10px greenyellow;
+
+
+
+    @include screen(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    div {
+        margin: 20px;
+        color: #ffea17;
+    }
+
+    button {
+        margin: 10px;
+    }
+
+    .image {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        border-right: 2px solid transparent;
+        margin: 20px;
+
+        @include screen(md) {
+            border-right-color: aqua;
+        }
+
+        img {
+            max-width: 200px;
+        }
+
+        input {
+            margin: 10px;
+            max-width: 97%;
+            color: #ffea17;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.footer {
+    font-family: $font-base;
+    background: linear-gradient(45deg, #000,rgb(53, 22, 22));
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+
+        @include screen(md) {
+            flex-direction: row;
+        }
+    }
+
+    a {
+        margin-bottom: 10px;
+    }
+
+    &__follow-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            font-size: 20px;
+
+            &:hover {
+                color: rgb(112, 24, 24);
+            }
+        }
+    }
+}

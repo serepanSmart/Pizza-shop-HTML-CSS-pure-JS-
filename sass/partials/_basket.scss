@@ -1,0 +1,124 @@
+body {
+    background: url(https://cloud.terrapizza.by/place/G_205x30371.jpg) center/cover no-repeat;
+
+    .basket {
+        min-height: 100vh;
+        font: $font-base;
+
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: #ffea17;
+            }
+        }
+
+        aside {
+            margin: 5px;
+            width: 70%;
+            border: 4px solid rgba(83, 132, 5, 0.6);
+            border-radius: 20px;
+            background: rgba(129, 126, 126, 0.7);
+            color: #000;
+            text-align: center;
+        }
+
+        .main {
+            background: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .pizza {
+                margin: 5px;
+                width: 300px;
+                border: 4px solid rgba(83, 132, 5, 0.6);
+                border-radius: 20px;
+                background: rgba(129, 126, 126, 0.7);
+                color: #000;
+
+                li {
+                    color: #000;
+                }
+            }
+        }
+
+        .form_promo {
+            margin: 15px;
+            text-align: center;
+
+            input {
+                margin: 15px;
+            }
+        }
+    }
+
+
+
+    .custom {
+        min-height: 100vh;
+        background: url(https://cloud.terrapizza.by/place/G_205x30371.jpg) center/cover no-repeat;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+
+        .customer {
+            width: 70%;
+            padding: 10px;
+            text-align: center;
+            border: 4px solid rgb(174, 182, 17);
+            border-radius: 15px;
+            box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.3);
+            overflow: auto;
+
+            .delivery,
+            .delivery h1 {
+                padding: 0;
+            }
+
+            label {
+                font-family: $font-base;
+                font-size: 24px;
+                font-weight: bold;
+                margin: 10px;
+
+                input {
+                    font-size: 16px;
+                    margin-left: 0;
+
+                }
+            }
+
+            input {
+                line-height: 1.5;
+                margin: 10px;
+                max-width: 95%;
+                outline: none;
+                border: 2px solid rgb(174, 182, 17);
+            }
+
+            button {
+                margin: 10px;
+            }
+        }
+    }
+
+    select {
+        margin: 10px;
+    }
+}
+
+#toShop {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
